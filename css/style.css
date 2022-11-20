@@ -1,0 +1,188 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #131313;
+}
+a{
+    color: inherit;
+}
+
+.active{
+    display: block;
+}
+.hide{
+    display: none;
+}
+
+.container{
+    max-width: 1220px;
+    /* статическая ширина, как и высота - это опасно */
+    /* поэтому пишем макс-виз, чтобы было динамически */
+    /* background-color: chartreuse; */
+    margin: 0 auto;/*   выравнивает по центру */
+    padding: 0 10px;
+    /* добавили эти 20пикс в ширину */
+}
+
+.header__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    /* выровняли блок посередине */
+}
+
+.navigation{
+    margin-right: 70px;
+}
+
+.navigation ul{
+    display: flex;
+}
+
+.navigation__item + .navigation__item{
+    padding-left: 10px;
+    /* запись + означает "выполнить для тех, у кого есть сосед" */
+    /* т.е. у 1 нет соседа слева. но есть справа. Значит правому добавляем. */
+    /* а последний имеет соседа слева */
+}
+
+.navigation__item a{
+    text-transform: uppercase;
+    padding: 43px 20px;
+    transition: 0.5s;
+}
+
+.navigation__item a:hover{
+    background-color: #131313;
+    color: white;
+}
+
+.bike{
+    padding: 100px 0 150px 0;
+}
+
+.bike__inner{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.bike__column + .bike__column{
+    flex-basis: 630px;
+    margin-left: 30px;
+    max-width: 630px;
+}
+
+.bike__title{
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 77px;
+    margin: 60px 0 5px;
+}
+
+.bike__subtitle{
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 39px;
+    color: #6f6f6f;
+    margin: 0 0 60px;
+}
+
+.bike__text{
+    max-width: 420px; 
+    /* тут уже не исп флекс-бэсис тк это не первый потомок флекса */
+    margin-top: 20px;
+}
+
+.bike__link{
+    margin-top: 80px;
+    display: inline-block;
+    /* схлопывание марджинов, т.е они не суммируются, а берется бОльший */
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 1.1em;
+    text-transform: uppercase;
+    color: white;
+    background-color: #131313;
+    padding: 28px 81px;
+    font-weight: 400;
+}
+
+.bike__link:hover{
+    background-color: #FF4040;
+    transition: 0.5s;
+}
+
+.bike-slider{
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.bike-slider .slick-dots{
+    right: 0;
+    top: 52px;
+}
+
+.slick-dots{
+    position: absolute;
+    top: 0;
+}
+
+.bike__slider-btns{
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    font-size: 24px;
+    width: 60px;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.bike__list{
+    display: flex;
+    text-align: center;
+    /* margin-top: 25px; */
+    font-weight: 700;
+    text-transform: uppercase;
+    justify-content: space-between;
+    /* flex-basis: 500px; */
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* .bike__list + .bike__list{
+    margin-left: 66px;
+} */
+
+.bike__list span{
+    display: block;
+    font-weight: 400;
+    margin-top: 13px;
+    font-size: 12px;
+    text-transform: lowercase;
+}
+
+.bike__list-item3{
+    max-width: 160px;
+}
+
+.advantages{
+    padding: 0 0 150px 0;
+}
+
+.adv-cont{
+    display: flex;
+    justify-content: space-between;
+}
+
+.advantages__text{
+    margin: 0 80px 0 60px;
+}
