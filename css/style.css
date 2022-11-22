@@ -183,6 +183,23 @@ a{
     justify-content: space-between;
 }
 
-.advantages__text{
+.advantages__paragraph{
     margin: 0 80px 0 60px;
 }
+
+.advantages__paragraph + .advantages__paragraph{
+    margin-top: 50px;
+}
+
+.advantages__title{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.advantages__text p{
+    width: 450px;
+}
+
