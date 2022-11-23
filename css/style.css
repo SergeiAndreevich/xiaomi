@@ -203,3 +203,67 @@ a{
     width: 450px;
 }
 
+.peculiarities{
+    padding-bottom: 150px;
+}
+
+
+.peculiarities__header{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.peculiarities__inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.characteristics__item{
+    width: 570px;
+    /* //как уйти от жестких рамок? */
+}
+
+.characteristics__item + .characteristics__item{
+    margin-top: 25px;
+}
+
+.characteristics__title{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    background-color: #131313;
+    color: white;
+    padding: 3px 0 3px 1px;
+    margin-bottom: 10px;
+}
+
+.characteristics__text-wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.characteristics__text-right{
+    width: 285px;
+    text-align: left;
+}
+
+.slider{
+    padding-bottom: 50px;
+}
+
+.slider__img{
+    margin-right: 0 auto;
+}
+
+.slider__img img{
+    height: 630px;
+    padding-left: 100px;
+    object-fit: none;
+}
+
