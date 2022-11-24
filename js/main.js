@@ -69,4 +69,60 @@ window.addEventListener('DOMContentLoaded', ()=>{
     //     slides.forEach(item => hide(item));
     //     show(slides[currentPage++]);
     // });
+
+// slider 2
+    const sliderBtns = document.querySelector('.slider__btns'), 
+        buttons = sliderBtns.querySelectorAll('.slider__btn'),
+        sliders = document.querySelectorAll('.slider__item'),
+        count = 0;
+
+    function addActiveBtn(number){
+        buttons.forEach(btn => btn.classList.remove('red'))
+        buttons[number].classList.add('red');
+    }
+    function hideAllSlides(){
+        sliders.forEach(item => {
+            item.classList.remove('active');
+            item.classList.add('hide');
+        });
+    }
+
+    function swipeSlideByBtn(){
+        sliderBtns.addEventListener('click', (e)=>{
+            if(e.target == buttons[0]){
+                addActiveBtn(0);
+                hideAllSlides();
+                sliders[0].classList.add('active');
+                count = 0;
+            } else if( e.target == buttons[1]){
+                addActiveBtn(1);
+                hideAllSlides();
+                sliders[1].classList.add('active');
+                count = 1;
+            } else if(e.target == buttons[2]){
+                addActiveBtn(2);
+                hideAllSlides();
+                sliders[2].classList.add('active');
+                count = 2;
+            }
+        });
+    }
+    swipeSlideByBtn();
+
+    function showDetermineSlide(numb){
+        hideAllSlides();
+        addActiveBtn(numb);
+        sliders[numb].classList.add('active');
+    }
+
+    function autoSwipe(){
+       //узнаем у кого active  и передвигаем следующему
+        ++count;
+        if (count >=2){
+            count = 0;
+            showDetermineSlide(count);
+        }
+    }
+    setTimeout(autoSwipe, 1000);
+    
 });

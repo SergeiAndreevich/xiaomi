@@ -263,7 +263,29 @@ a{
 
 .slider__img img{
     height: 630px;
-    padding-left: 100px;
+    padding-left: 50px;
     object-fit: none;
+    object-fit: cover;
 }
 
+.slider__inner{
+    position: relative;
+}
+
+.slider__btns{
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+.slider__btn{
+    width: 2px;
+    height: 25px;
+    background: #131313;
+    border-radius: 7px;
+    margin-bottom: 10px;
+}
+
+.red{
+    background-color: #ff4040;
+}
