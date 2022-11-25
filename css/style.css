@@ -264,8 +264,6 @@ a{
 .slider__img img{
     height: 630px;
     padding-left: 50px;
-    object-fit: none;
-    object-fit: cover;
 }
 
 .slider__inner{
@@ -276,6 +274,7 @@ a{
     position: absolute;
     top:0;
     left: 0;
+    cursor: pointer;
 }
 
 .slider__btn{
@@ -288,4 +287,18 @@ a{
 
 .red{
     background-color: #ff4040;
+}
+
+.activated{
+    display: block;
+    /* object-fit: cover; */
+}
+.hidden{
+    display: none;
+}
+
+.footer{
+    background-color: #131313;
+    margin-top: 100px;
+    padding: 21px 0;
 }
