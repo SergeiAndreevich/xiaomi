@@ -297,12 +297,12 @@ a{
     display: none;
 }
 
-.form{
-    max-width: 420px;
+.order__inner{
+    position: relative;
 }
 
-.form__bike{
-    display: none;
+.form{
+    max-width: 420px;
 }
 
 .form__title{
@@ -326,7 +326,7 @@ a{
     border-bottom: 1px solid #131313;
     padding-bottom: 10px;
     margin-bottom: 20px;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .form__input-name::placeholder,
@@ -378,6 +378,42 @@ background-color: #6F6F6F;
     display: block;
 }
 
+.form__bike{
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.form__bike-price{
+    position: absolute;
+    top: 28px;
+    left: 0;
+    right: 0;
+    font-size: 32px;
+    height: 100px;
+    width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #FF4040;
+    border-radius: 50%;
+    /* офигенное св-во, чтобы двигать по сторонам */
+    transform: translateX(-50%);
+
+}
+.form__bike-price::after{
+    content: '';
+    position: absolute;
+    border: 1px solid #FF4040;
+    border-radius: 50%;
+    top: 12px;
+    left: 0;
+    width: 220px;
+    height: 100px;
+    border: 1px solid #FF4040;
+    border-radius: 50%;
+}
 
 
 .form__btn{
@@ -403,4 +439,34 @@ background-color: #6F6F6F;
     background-color: #131313;
     margin-top: 100px;
     padding: 21px 0;
+}
+.footer__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer__policy{
+    color: white;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: lowercase;
+    text-decoration: underline;
+}
+.footer__social +.footer__social{
+    margin-left: 28px;
+}
+.footer__contacts{
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.contacts-up{
+    display: block;
+}
+.footer__contacts-item{
+    margin-right: 10px;
+}
+.footer__contacts-span{
+    color: white;
 }
