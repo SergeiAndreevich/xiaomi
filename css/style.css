@@ -297,6 +297,108 @@ a{
     display: none;
 }
 
+.form{
+    max-width: 420px;
+}
+
+.form__bike{
+    display: none;
+}
+
+.form__title{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.form__text{
+    width: 300px;
+    /* т.к минимальный адаптив 320пикс, то тут не мадо макс-виз */
+    margin-bottom: 30px;
+}
+
+.form__input-name,
+.form__input-tel{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #131313;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.form__input-name::placeholder,
+.form__input-tel::placeholder,
+.form__color{
+    line-height: 120%;
+    color: #6F6F6F;
+    opacity: 0.5;
+}
+
+.form__label-box{
+    display: flex;
+    margin-top: 10px;
+}
+
+.form__label + .form__label{
+    margin-left: 23px;
+}
+
+.form__radio-style{
+    width: 80px;
+    height: 12px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.form__radio-style--grey{
+background-color: #6F6F6F;
+}
+.form__radio-style--white{
+    background-color: #fff;
+    border: 1px solid #6F6F6F;
+}
+.form__radio-style--red{
+    background-color: #FF4040;
+}
+
+.form__input-radio{
+    /* не рекомендуется делать дисплей-нон */
+    /* лучше аккуратно спрятать */
+    position: absolute;
+    width: 1px;
+    height: 1px;   
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+.form__input-radio:checked + .form__bike{
+    display: block;
+}
+
+
+
+.form__btn{
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 1.1em;
+    text-transform: uppercase;
+    color: white;
+    background-color: #131313;
+    padding: 28px 81px;
+    margin-top: 50px;
+}
+.form__btn:hover{
+    background-color: #FF4040;
+    transition: 0.3s;
+}
+
+
+
+
+
 .footer{
     background-color: #131313;
     margin-top: 100px;
